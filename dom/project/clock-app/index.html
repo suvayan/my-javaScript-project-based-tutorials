@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./toggle-btn.css">
     <link rel="stylesheet" href="./style.css">
     <title>clock app</title>
 </head>
@@ -17,14 +18,35 @@
             <main class="main">
                 <!-- Clock Section -->
                 <div class="clock">
-                    <div class="clock-time">
-                        <div id="hour" class="clock-time-text"></div>
-                        <div class="clock-time-text">:</div>
-                        <div id="munite" class="clock-time-text"></div>
-                        <div class="clock-time-text">:</div>
-                        <div id="second" class="clock-time-text"></div>
+                    <div class="clock-header">
+                        <div class="clock-header-flex">
+                            <div class="clock-header-flex-text">Digital</div>
+                            <div class="toggle-btn">
+                                <input type="checkbox" id="toggleClock"/>
+                                <label for="toggleClock"></label>
+                            </div>
+                            <div class="clock-header-flex-text">Analog</div>
+                        </div>
+                        <div class="clock-header-flex">
+                            <div class="clock-header-flex-text">24hr</div>
+                            <div class="toggle-btn">
+                                <input type="checkbox" id="toggleHour"/>
+                                <label for="toggleHour"></label>
+                            </div>
+                            <div class="clock-header-flex-text">12hr</div>
+                        </div>
                     </div>
-                    <div class="clock-date" id="date-text"></div>
+                    <div class="clock-main">
+                        <div class="clock-time">
+                            <div id="hour" class="clock-time-text"></div>
+                            <div class="clock-time-text">:</div>
+                            <div id="munite" class="clock-time-text"></div>
+                            <div class="clock-time-text">:</div>
+                            <div id="second" class="clock-time-text"></div>
+                            <div id="ampm" class="clock-time-text"></div>
+                        </div>
+                        <div class="clock-date" id="date-text"></div>
+                    </div>
                 </div>
                 <!-- end -->
                 <div class="alarm main-hidden">Alarm</div>
@@ -40,6 +62,6 @@
         </div>
     </div>
     <script src="./script.js"></script>
-    <script src="./hour-24-clock.js"></script>
+    <script src="./clock.js"></script>
 </body>
 </html>
