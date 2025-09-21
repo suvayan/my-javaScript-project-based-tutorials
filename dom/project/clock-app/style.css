@@ -110,9 +110,34 @@ html, body{
     height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+.clock-header{
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clock-header-flex{
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    column-gap: 5px;
+}
+
+.clock-header-flex-text{
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.clock-main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -125,7 +150,7 @@ html, body{
 }
 
 .clock-time-text{
-    font-size: 48px;
+    font-size: 38px;
     font-weight: bold;
     letter-spacing: 2px
 }
@@ -136,3 +161,10 @@ html, body{
   font-size: 18px;
   font-weight: 400;
 }
+
+
+
+
+
+
+
