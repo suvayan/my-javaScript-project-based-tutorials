@@ -1,6 +1,6 @@
 const toggleClock = document.querySelector("#toggleClock");
 const toggleHour = document.querySelector("#toggleHour");
-
+const clockTime = document.querySelector(".clock-time");
 
 
 
@@ -14,8 +14,6 @@ const hourFormater = (val) => {
 // Clock handler: updates time and date
 const clockHandler = () => {
     const now = new Date();
-
-    // console.dir(toggleHour.checked)
 
     // Current time
     const hour = toggleHour.checked? hourFormater(now.getHours()) : now.getHours();
@@ -61,15 +59,21 @@ setInterval(clockHandler, 1000);
 
 
 toggleClock.addEventListener("change",function(e){
-    if(e.target.checked){
-        toggleHour.disabled = true;
+    const isChecked = e.target.checked;
+    const children  = Array.from(clockTime.children);
+    if(isChecked){
+        children.forEach((child)=>{
+            child.classList.add("time-text-small");
+        })
     }else{
-        toggleHour.disabled = false;
+        children.forEach((child)=>{
+            child.classList.remove("time-text-small");
+        })
     }
 })
 
 
-toggleHour.addEventListener("change",function(e){
-    const isChecked = e.target.checked;
-    toggleClock.disabled = isChecked;
-})
+// toggleHour.addEventListener("change",function(e){
+//     const isChecked = e.target.checked;
+//     toggleClock.disabled = isChecked;
+// })

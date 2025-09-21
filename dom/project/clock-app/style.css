@@ -156,6 +156,11 @@ html, body{
 }
 
 
+.time-text-small{
+    font-size: 15px;
+}
+
+
 
 .clock-date {
   font-size: 18px;
