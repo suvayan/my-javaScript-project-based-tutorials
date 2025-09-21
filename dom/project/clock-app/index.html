@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>clock app</title>
+</head>
+<body>
+    <div class="container">
+        <div class="app">
+            <header class="header">
+                <div class="header-text">Clock</div>
+            </header>
+            <main class="main">
+                <!-- Clock Section -->
+                <div class="clock">
+                    <div class="clock-time">
+                        <div id="hour" class="clock-time-text"></div>
+                        <div class="clock-time-text">:</div>
+                        <div id="munite" class="clock-time-text"></div>
+                        <div class="clock-time-text">:</div>
+                        <div id="second" class="clock-time-text"></div>
+                    </div>
+                    <div class="clock-date" id="date-text"></div>
+                </div>
+                <!-- end -->
+                <div class="alarm main-hidden">Alarm</div>
+                <div class="stopwatch main-hidden">Stopwatch</div>
+                <div class="timer main-hidden">Timer</div>
+            </main>
+            <footer class="footer">
+                <i class="fa-solid fa-clock"></i>
+                <i class="fa-solid fa-alarm-clock"></i>
+                <i class="fa-solid fa-stopwatch"></i>
+                <i class="fa-solid fa-hourglass-end"></i>
+            </footer>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
